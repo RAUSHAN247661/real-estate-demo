@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | LuxeEstate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-house-chimney-window"></i> LuxeEstate
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="listings.html" class="nav-link">Properties</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="nav-contact hide-mobile" style="display: flex; gap: 1.5rem; margin-right: 1.5rem; font-size: 0.9rem; font-weight: 600;">
+                    <a href="tel:+15551234567" style="display: flex; align-items: center; gap: 0.5rem; color: var(--text-secondary);"><i class="fas fa-phone" style="color: var(--accent-color);"></i> +1 (555) 123-4567</a>
+                    <a href="mailto:info@luxeestate.com" style="display: flex; align-items: center; gap: 0.5rem; color: var(--text-secondary);"><i class="fas fa-envelope" style="color: var(--accent-color);"></i> info@luxeestate.com</a>
+                </div>
+                <button class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>About LuxeEstate</h1>
+            <p>Elevating the standard of luxury real estate since 2010</p>
+        </div>
+    </header>
+
+    <section class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-img">
+                    <img src="images/hero.png" alt="Our Office">
+                </div>
+                <div class="about-text">
+                    <h2>Our Mission</h2>
+                    <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">At LuxeEstate, we believe that finding a home is more than just a transaction; it's about finding where your life's next chapter begins. Our mission is to provide an unparalleled real estate experience through expertise, integrity, and personalized service.</p>
+                    <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">With over a decade of experience in the luxury market, we have built a reputation for excellence and a network that spans across the globe.</p>
+                    <div style="display: flex; gap: 2rem; margin-top: 2rem;">
+                        <div>
+                            <div style="font-size: 2.5rem; font-weight: 800; color: var(--accent-color);">15+</div>
+                            <div style="font-size: 0.8rem; font-weight: 600;">Years Experience</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 2.5rem; font-weight: 800; color: var(--accent-color);">2k+</div>
+                            <div style="font-size: 0.8rem; font-weight: 600;">Homes Sold</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 2.5rem; font-weight: 800; color: var(--accent-color);">98%</div>
+                            <div style="font-size: 0.8rem; font-weight: 600;">Happy Clients</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section" style="background: var(--bg-color);">
+        <div class="container">
+            <h2>Our Expert Team</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="https://i.pravatar.cc/150?u=1" alt="Team Member">
+                    <h3>Sarah Johnson</h3>
+                    <p style="color: var(--accent-color); font-weight: 600;">Founder & CEO</p>
+                </div>
+                <div class="team-card">
+                    <img src="https://i.pravatar.cc/150?u=2" alt="Team Member">
+                    <h3>Michael Chen</h3>
+                    <p style="color: var(--accent-color); font-weight: 600;">Director of Sales</p>
+                </div>
+                <div class="team-card">
+                    <img src="https://i.pravatar.cc/150?u=3" alt="Team Member">
+                    <h3>Emma Williams</h3>
+                    <p style="color: var(--accent-color); font-weight: 600;">Luxury Specialist</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 LuxeEstate. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

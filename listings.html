@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties | LuxeEstate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-house-chimney-window"></i>
+                LuxeEstate
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="listings.html" class="nav-link active">Properties</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="nav-contact hide-mobile" style="display: flex; gap: 1.5rem; margin-right: 1.5rem; font-size: 0.9rem; font-weight: 600;">
+                    <a href="tel:+15551234567" style="display: flex; align-items: center; gap: 0.5rem; color: var(--text-secondary);"><i class="fas fa-phone" style="color: var(--accent-color);"></i> +1 (555) 123-4567</a>
+                    <a href="mailto:info@luxeestate.com" style="display: flex; align-items: center; gap: 0.5rem; color: var(--text-secondary);"><i class="fas fa-envelope" style="color: var(--accent-color);"></i> info@luxeestate.com</a>
+                </div>
+                <button class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Property Listings</h1>
+            <p>Explore our wide range of premium properties</p>
+        </div>
+    </header>
+
+    <section class="listings-section">
+        <div class="container">
+            <!-- Filters Bar -->
+            <div class="filters-bar">
+                <div class="filter-group">
+                    <select id="filterType">
+                        <option value="all">All Types</option>
+                        <option value="villa">Villa</option>
+                        <option value="apartment">Apartment</option>
+                        <option value="house">House</option>
+                    </select>
+                    <select id="filterPrice">
+                        <option value="all">Any Price</option>
+                        <option value="low">Under $500k</option>
+                        <option value="mid">$500k - $1M</option>
+                        <option value="high">Above $1M</option>
+                    </select>
+                </div>
+                <div class="sort-group">
+                    <label for="sortOrder">Sort By:</label>
+                    <select id="sortOrder">
+                        <option value="newest">Newest</option>
+                        <option value="price-asc">Price (Low to High)</option>
+                        <option value="price-desc">Price (High to Low)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="properties-grid" id="listingsGrid">
+                <!-- Property Cards will be dynamically injected or static for demo -->
+                <div class="property-card" data-type="villa" data-price="1250000">
+                    <div class="property-img">
+                        <img src="images/hero.png" alt="Modern Villa">
+                        <div class="property-badges"><span class="badge sale">For Sale</span></div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">₹10.50 Cr</div>
+                        <h3 class="property-title">Horizon Sunset Villa</h3>
+                        <p class="property-location"><i class="fas fa-location-dot"></i> Beverly Hills, CA</p>
+                        <a href="property-details.html" class="btn btn-outline" style="width: 100%; margin-top: 1.5rem;">View Details</a>
+                    </div>
+                </div>
+
+                <div class="property-card" data-type="apartment" data-price="4500">
+                    <div class="property-img">
+                        <img src="images/apartment.png" alt="Modern Apartment">
+                        <div class="property-badges"><span class="badge sale">For Rent</span></div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">₹3.75 L/mo</div>
+                        <h3 class="property-title">Skyline View Penthouse</h3>
+                        <p class="property-location"><i class="fas fa-location-dot"></i> Manhattan, NY</p>
+                        <a href="property-details.html" class="btn btn-outline" style="width: 100%; margin-top: 1.5rem;">View Details</a>
+                    </div>
+                </div>
+
+                <div class="property-card" data-type="house" data-price="850000">
+                    <div class="property-img">
+                        <img src="images/house.png" alt="Suburban House">
+                        <div class="property-badges"><span class="badge sale">For Sale</span></div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">₹7.25 Cr</div>
+                        <h3 class="property-title">Oakwood Family Home</h3>
+                        <p class="property-location"><i class="fas fa-location-dot"></i> Austin, TX</p>
+                        <a href="property-details.html" class="btn btn-outline" style="width: 100%; margin-top: 1.5rem;">View Details</a>
+                    </div>
+                </div>
+
+                <div class="property-card" data-type="villa" data-price="3450000">
+                    <div class="property-img">
+                        <img src="images/mansion.png" alt="Coastal Mansion">
+                        <div class="property-badges"><span class="badge sale">For Sale</span></div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">₹28.50 Cr</div>
+                        <h3 class="property-title">Azure Bay Mansion</h3>
+                        <p class="property-location"><i class="fas fa-location-dot"></i> Malibu, CA</p>
+                        <a href="property-details.html" class="btn btn-outline" style="width: 100%; margin-top: 1.5rem;">View Details</a>
+                    </div>
+                </div>
+
+                <div class="property-card" data-type="apartment" data-price="2800">
+                    <div class="property-img">
+                        <img src="images/studio.png" alt="Urban Studio">
+                        <div class="property-badges"><span class="badge sale">For Rent</span></div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">₹2.30 L/mo</div>
+                        <h3 class="property-title">Modern Urban Studio</h3>
+                        <p class="property-location"><i class="fas fa-location-dot"></i> Seattle, WA</p>
+                        <a href="property-details.html" class="btn btn-outline" style="width: 100%; margin-top: 1.5rem;">View Details</a>
+                    </div>
+                </div>
+
+                <div class="property-card" data-type="house" data-price="1150000">
+                    <div class="property-img">
+                        <img src="images/mountain.png" alt="Mountain Retreat">
+                        <div class="property-badges"><span class="badge sale">For Sale</span></div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">₹9.60 Cr</div>
+                        <h3 class="property-title">Alpine Glass Retreat</h3>
+                        <p class="property-location"><i class="fas fa-location-dot"></i> Aspen, CO</p>
+                        <a href="property-details.html" class="btn btn-outline" style="width: 100%; margin-top: 1.5rem;">View Details</a>
+                    </div>
+                </div>
+
+                <div class="property-card" data-type="apartment" data-price="5500">
+                    <div class="property-img">
+                        <img src="images/loft.png" alt="Luxury Loft">
+                        <div class="property-badges"><span class="badge sale">For Rent</span></div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">₹4.50 L/mo</div>
+                        <h3 class="property-title">Industrial Luxury Loft</h3>
+                        <p class="property-location"><i class="fas fa-location-dot"></i> Chicago, IL</p>
+                        <a href="property-details.html" class="btn btn-outline" style="width: 100%; margin-top: 1.5rem;">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer same as index -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="color: #fff; margin-bottom: 1.5rem;">
+                        <i class="fas fa-house-chimney-window"></i> LuxeEstate
+                    </a>
+                    <p>LuxeEstate is a leading premium real estate agency specializing in luxury properties across the globe.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-location-dot"></i> 123 Luxury Lane, Beverly Hills, CA</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LuxeEstate. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
