@@ -83,56 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3000);
     }
 
-    // --- AI Chatbot Logic ---
-    const chatbotToggle = document.getElementById('chatbotToggle');
-    const chatbotWindow = document.getElementById('chatbotWindow');
-    const closeChatbot = document.getElementById('closeChatbot');
-    const chatInput = document.getElementById('chatInput');
-    const sendMessage = document.getElementById('sendMessage');
-    const chatbotMessages = document.getElementById('chatbotMessages');
-
-    chatbotToggle?.addEventListener('click', () => {
-        chatbotWindow.classList.toggle('active');
-        if (chatbotWindow.classList.contains('active')) {
-            chatInput.focus();
-        }
-    });
-
-    closeChatbot?.addEventListener('click', () => {
-        chatbotWindow.classList.remove('active');
-    });
-
-    function addMessage(text, sender) {
-        const messageDiv = document.createElement('div');
-        messageDiv.classList.add('message', sender);
-        messageDiv.textContent = text;
-        chatbotMessages.appendChild(messageDiv);
-        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-    }
-
-    function handleChat() {
-        const text = chatInput.value.trim();
-        if (text) {
-            addMessage(text, 'user');
-            chatInput.value = '';
-
-            // Simulate bot thinking
-            setTimeout(() => {
-                let response = "That's a great question! Our agents can help you with that. Would you like me to schedule a call?";
-                if (text.toLowerCase().includes('price') || text.toLowerCase().includes('cost')) {
-                    response = "Property prices vary by location. Our premium villas start from ₹5 Cr. You can check the 'Properties' page for specific details.";
-                } else if (text.toLowerCase().includes('hello') || text.toLowerCase().includes('hi')) {
-                    response = "Hello! How can I assist you with your real estate needs today?";
-                } else if (text.toLowerCase().includes('location') || text.toLowerCase().includes('where')) {
-                    response = "We have properties in prime locations like Beverly Hills, Manhattan, Austin, Malibu, and Aspen.";
-                }
-                addMessage(response, 'bot');
-            }, 1000);
-        }
-    }
-
-    sendMessage?.addEventListener('click', handleChat);
-    chatInput?.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') handleChat();
-    });
+    // --- Call Now Logic (Optional: Randomize number or tracking) ---
+    // Currently handled via static tel: link for better reliability
 });
