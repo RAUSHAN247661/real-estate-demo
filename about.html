@@ -100,6 +100,48 @@
             </div>
         </div>
     </footer>
+    <!-- Floating Widgets -->
+    <div class="floating-widgets">
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/15551234567" class="floating-btn whatsapp-btn" target="_blank" title="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+        <!-- Chatbot Toggle -->
+        <button class="floating-btn chatbot-toggle" id="chatbotToggle" title="Open AI Chatbot">
+            <i class="fas fa-robot"></i>
+        </button>
+
+        <!-- Chatbot Window -->
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <div class="chatbot-info">
+                    <div class="chatbot-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div>
+                        <h4>Luxe AI Assistant</h4>
+                        <span class="status">Online</span>
+                    </div>
+                </div>
+                <button class="close-chatbot" id="closeChatbot">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="message bot">
+                    Hello! I'm your LuxeEstate assistant. How can I help you find your dream property today?
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatInput" placeholder="Ask about properties, pricing...">
+                <button id="sendMessage">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
